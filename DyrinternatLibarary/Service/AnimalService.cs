@@ -1,7 +1,7 @@
-﻿using Dyreinternatet.Repository;
-using Dyreinternatet.Model;
+﻿using DyrinternatLibarary.Repository;
+using DyrinternatLibarary.Model;
 using System.Diagnostics;
-namespace Dyreinternatet.Service
+namespace DyrinternatLibarary.Service
 {
     public class AnimalService
     {

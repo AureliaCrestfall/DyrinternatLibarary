@@ -1,7 +1,7 @@
-﻿using Dyreinternatet.Model;
-using Dyreinternatet.Repository;
+﻿using DyrinternatLibarary.Model;
+using DyrinternatLibarary.Repository;
 
-namespace Dyreinternatet.Service
+namespace DyrinternatLibarary.Service
 {
     public class WorkerService
     {

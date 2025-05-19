@@ -1,4 +1,4 @@
-﻿namespace Dyreinternatet.Model
+﻿namespace DyrinternatLibarary.Model
 {
     public class Activity
     {

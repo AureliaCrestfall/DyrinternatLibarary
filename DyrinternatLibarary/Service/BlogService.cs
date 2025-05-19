@@ -1,8 +1,8 @@
-﻿using Dyreinternatet.Repository;
-using Dyreinternatet.Model;
+﻿using DyrinternatLibarary.Repository;
+using DyrinternatLibarary.Model;
 
 
-namespace Dyreinternatet.Service
+namespace DyrinternatLibarary.Service
 {
     public class BlogService
     {

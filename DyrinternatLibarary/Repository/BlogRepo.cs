@@ -1,5 +1,5 @@
-﻿using Dyreinternatet.Model;
-namespace Dyreinternatet.Repository
+﻿using DyrinternatLibarary.Model;
+namespace DyrinternatLibarary.Repository
 {
     public class BlogRepo:IBlogRepo
     {

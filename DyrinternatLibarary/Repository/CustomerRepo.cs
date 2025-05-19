@@ -1,6 +1,6 @@
-﻿using Dyreinternatet.Model;
+﻿using DyrinternatLibarary.Model;
 
-namespace Dyreinternatet.Repository
+namespace DyrinternatLibarary.Repository
 {
     public class CustomerRepo:ICustomerRepo
     {

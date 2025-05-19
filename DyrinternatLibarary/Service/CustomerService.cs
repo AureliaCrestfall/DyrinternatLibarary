@@ -1,6 +1,6 @@
-﻿using Dyreinternatet.Model;
-using Dyreinternatet.Repository;
-namespace Dyreinternatet.Service
+﻿using DyrinternatLibarary.Model;
+using DyrinternatLibarary.Repository;
+namespace DyrinternatLibarary.Service
 {
     public class CustomerService
     {

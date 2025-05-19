@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace Dyreinternatet.Model
+namespace DyrinternatLibarary.Model
 {
     public class Blog
     {

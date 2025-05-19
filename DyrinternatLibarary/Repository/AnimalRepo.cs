@@ -1,6 +1,6 @@
-﻿using Dyreinternatet.Model;
+﻿using DyrinternatLibarary.Model;
 using System.Diagnostics;
-namespace Dyreinternatet.Repository
+namespace DyrinternatLibarary.Repository
 {
     public class AnimalRepo:IAnimalRepo
     {
