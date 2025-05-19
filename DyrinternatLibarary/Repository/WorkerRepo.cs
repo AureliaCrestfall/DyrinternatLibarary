@@ -2,30 +2,27 @@
 
 namespace DyrinternatLibarary.Repository
 {
-    public class WorkerRepo:IWorkerRepo
+    public class WorkerRepo : IWorkerRepo
     {
-
         List<Worker> _workers;
-
-        protected List<Worker> Workers
+        public WorkerRepo()
         {
-            get { return _workers; }
-            set { _workers = value; }
+            _workers = new List<Worker>();
         }
 
         public List<Worker> GetAll()
         {
-            return Workers;
+            return _workers;
         }
 
         public void Add(Worker woker)
         {
-            Workers.Add(woker);
+            _workers.Add(woker);
         }
 
         public void Remove(int id)
         {
-            Workers.RemoveAt(id);
+            _workers.RemoveAt(id);
         }
 
     }

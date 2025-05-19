@@ -2,30 +2,29 @@
 
 namespace DyrinternatLibarary.Repository
 {
-    public class CustomerRepo:ICustomerRepo
+    public class CustomerRepo : ICustomerRepo
     {
 
         List<Customer> _customers;
 
-        protected List<Customer> Customers
+        public CustomerRepo()
         {
-            get { return _customers; }
-            set { _customers = value; }
+            _customers = new List<Customer>();
         }
 
         public List<Customer> GetAll()
         {
-            return Customers;
+            return _customers;
         }
 
         public void Add(Customer customer)
         {
-            Customers.Add(customer);
+            _customers.Add(customer);
         }
 
         public void Remove(int phoneNumber)
         {
-            Customers.RemoveAt(phoneNumber);
+            _customers.RemoveAt(phoneNumber);
         }
 
     }

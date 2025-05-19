@@ -7,6 +7,10 @@ namespace DyrinternatLibarary.Service
     {
 
         IWorkerRepo _workerRepo;
+        public WorkerService(IWorkerRepo workerRepo)
+        {
+            _workerRepo = workerRepo;
+        }
         public List<Worker> GetAll()
         {
             return _workerRepo.GetAll();
