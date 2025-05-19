@@ -2,6 +2,7 @@
 {
     public class Animal
     {
+        static int _chipcounter = 0;
         int _chipNumber;
         string _species;
         string _name;
@@ -70,7 +71,7 @@
         public Animal()
         {
 
-            _chipNumber = _chipNumber++;
+            _chipNumber = _chipcounter++;
             _species = "bunny";
             _name = "bunny";
             _age = 12;
@@ -86,7 +87,7 @@
         public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this()
         {
 
-           
+            gender.ToLower();
             _species = species;
             _name = name;
             _age = age;
