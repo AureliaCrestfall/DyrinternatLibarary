@@ -3,7 +3,6 @@ using DyrinternatLibarary.Repository;
 using DyrinternatLibarary.Service;
 
 
-using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleAppDyr
 {
@@ -12,7 +11,7 @@ namespace ConsoleAppDyr
         static void Main(string[] args)
         {
 
-
+            
            // AnimalService _aniser = new AnimalService();
 
             AnimalRepo _aniro = new AnimalRepo();
