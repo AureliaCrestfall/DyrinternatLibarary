@@ -11,33 +11,38 @@ namespace ConsoleAppDyr
         static void Main(string[] args)
         {
 
-            
-           // AnimalService _aniser = new AnimalService();
-
             AnimalRepo _aniro = new AnimalRepo();
-            Animal dwedw = new Animal();
-            Animal edwdw = new Animal();
-            Animal fefe = new Animal();
+
+            AnimalService _aniser = new AnimalService(_aniro);
+
+          
 
             List<Animal> anis = new List<Animal>();
-            
-            
+            Animal dwedw = new Animal();
 
-            anis = _aniro.GetAll();
-            anis.Add(dwedw);
-            anis.Add(edwdw);
-            anis.Add(fefe);
+            _aniser.Add(dwedw);
 
-           
-
+            anis = _aniser.GetAll();
             foreach (Animal animal in anis)
             {
-                Console.WriteLine("list anis2 "+animal.ChipNumber);
+                Console.WriteLine("list anis2 " + animal.ChipNumber);
             }
 
 
+
+
+
+
+
+
+
+
+
+            Animal edwdw = new Animal();
+            Animal fefe = new Animal();
+
         }
-        
-        
+
+
     }
 }
