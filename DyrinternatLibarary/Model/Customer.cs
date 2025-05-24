@@ -1,4 +1,4 @@
-﻿namespace DyrinternatLibarary.Model
+﻿namespace Dyreinternatet.Model
 {
     public class Customer
     {

@@ -1,6 +1,6 @@
-﻿using DyrinternatLibarary.Model;
-using DyrinternatLibarary.Repository;
-namespace DyrinternatLibarary.Service
+﻿using Dyreinternatet.Model;
+using Dyreinternatet.Repository;
+namespace Dyreinternatet.Service
 {
     public class CustomerService
     {
@@ -22,6 +22,9 @@ namespace DyrinternatLibarary.Service
         {
             return _customerRepo.GetAll();
         }
-
+        public void Edit(int place, Customer editCustomer)
+        {
+            _customerRepo.Edit(place, editCustomer);
+        }
     }
 }

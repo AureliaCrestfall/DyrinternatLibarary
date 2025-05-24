@@ -1,7 +1,7 @@
-﻿using DyrinternatLibarary.Model;
-using DyrinternatLibarary.Repository;
+﻿using Dyreinternatet.Model;
+using Dyreinternatet.Repository;
 
-namespace DyrinternatLibarary.Service
+namespace Dyreinternatet.Service
 {
     public class WorkerService
     {
@@ -22,6 +22,10 @@ namespace DyrinternatLibarary.Service
         public void Remove(int id)
         {
             _workerRepo.Remove(id);
+        }
+        public void Edit(int place, Worker editworker)
+        {
+            _workerRepo.Edit(place, editworker);
         }
     }
 }

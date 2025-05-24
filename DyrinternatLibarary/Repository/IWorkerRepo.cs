@@ -1,6 +1,6 @@
-﻿using DyrinternatLibarary.Model;
+﻿using Dyreinternatet.Model;
 
-namespace DyrinternatLibarary.Repository
+namespace Dyreinternatet.Repository
 {
     public interface IWorkerRepo
     {
@@ -8,5 +8,7 @@ namespace DyrinternatLibarary.Repository
         List<Worker> GetAll();
         void Add(Worker woker);
         void Remove(int id);
+        void Edit(int place, Worker editworker);
+
     }
 }

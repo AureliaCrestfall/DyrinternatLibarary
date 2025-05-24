@@ -1,8 +1,8 @@
-﻿using DyrinternatLibarary.Model;
+﻿using Dyreinternatet.Model;
 
-namespace DyrinternatLibarary.Repository
+namespace Dyreinternatet.Repository
 {
-    public class CustomerRepo : ICustomerRepo
+    public class CustomerRepo:ICustomerRepo
     {
 
         List<Customer> _customers;
@@ -10,7 +10,9 @@ namespace DyrinternatLibarary.Repository
         public CustomerRepo()
         {
             _customers = new List<Customer>();
+            seed();
         }
+       
 
         public List<Customer> GetAll()
         {
@@ -26,6 +28,14 @@ namespace DyrinternatLibarary.Repository
         {
             _customers.RemoveAt(phoneNumber);
         }
-
+        void seed()
+        { 
+            _customers.Add(new Customer("John Doe", "123456", "johndoe@gmail.com", "himmerlandsvej 69"));
+            _customers.Add(new Customer("Luka Magnotta", "123456", "IloveKittens@gmail.com", "Maglegårdsvej 17"));
+        }
+        public void Edit(int place, Customer editCustomer)
+        {
+            _customers[place] = editCustomer;
+        }
     }
 }

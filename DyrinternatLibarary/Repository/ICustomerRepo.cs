@@ -1,11 +1,13 @@
-﻿using DyrinternatLibarary.Model;
+﻿using Dyreinternatet.Model;
 
-namespace DyrinternatLibarary.Repository
+namespace Dyreinternatet.Repository
 {
     public interface ICustomerRepo
     {
         List<Customer> GetAll();
         void Add(Customer customer);
         void Remove(int phoneNumber);
+        void Edit(int place, Customer editCustomer);
+
     }
 }

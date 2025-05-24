@@ -1,19 +1,31 @@
-﻿namespace DyrinternatLibarary.Model
+﻿using System.Diagnostics;
+
+namespace Dyreinternatet.Model
 {
     public class Animal
     {
-        static int _chipcounter = 0;
         int _chipNumber;
+        int _id;
         string _species;
         string _name;
         int _age;
         string _race;
         public  enum Genderenum {Male,Female,Unknown};
         DateTime _timeAtShelter;
-        string[] _statuses;
         List<string> _visits;
         string _description;
         Genderenum _gender;
+        string _imgPath;
+        public int ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string ImgPath
+        {
+            get { return _imgPath; }
+            set { _imgPath = value; }
+        }
 
         public int ChipNumber
         {
@@ -52,11 +64,7 @@
             set {
                 _timeAtShelter = value;}
         }
-        public string[] Statuses
-        {
-            get { return _statuses; }
-            set { _statuses = value; }
-        }
+        
         public List<string> Visits
         {
             get { return _visits; }
@@ -67,33 +75,44 @@
             get {return _description; }
             set { _description = value; }
         }
-
         public Animal()
         {
+            
+            _chipNumber = 0;
+            _species = "bunny";
+            _name = "bunny";
+            _age = 12;
+            _race = "bunny";
+            _timeAtShelter = DateTime.Now.Date.AddHours(DateTime.Now.Hour);
+            _visits = new List<string>();
+            _description = "this is a bunny";
+        }
+        public Animal(int chip) : this()
+        {
 
-            _chipNumber = _chipcounter++;
+            _chipNumber = chip;
             _species = "bunny";
             _name = "bunny";
             _age = 12;
             _race = "bunny";
             _timeAtShelter = DateTime.Now;
             _visits = new List<string>();
-            //_statuses = new string[]();
             _description = "this is a bunny";
+            _id = _chipNumber;
 
         }
 
         //:this() means chaining with the before constructor animal
-        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this()
+        public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender) : this(chip)
         {
 
-            gender.ToLower();
+
             _species = species;
             _name = name;
             _age = age;
             _race = race;
             _timeAtShelter = timeatshelter;
-           
+            gender = gender.ToLower();
             _description = description;
             if ((gender != null) && (gender.Equals("female")))
             {
@@ -108,7 +127,12 @@
                 _gender = Genderenum.Unknown;
 
             }
+        }
 
+         public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender,string path) : this( chip, species, name, race, age, timeatshelter, description,  gender)
+         {
+            _imgPath = path;
+         }
 
 
 
@@ -118,5 +142,5 @@
 
 
 
-    }
 }
+

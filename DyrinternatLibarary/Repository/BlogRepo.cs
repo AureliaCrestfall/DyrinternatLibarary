@@ -1,12 +1,17 @@
-﻿using DyrinternatLibarary.Model;
-namespace DyrinternatLibarary.Repository
+﻿using Dyreinternatet.Model;
+namespace Dyreinternatet.Repository
 {
     public class BlogRepo:IBlogRepo
     {
 
-        List<Blog> _blogs;
+        private List<Blog> _blogs;
+        public BlogRepo()
+        {
+            _blogs = new List<Blog>();
+            seed();
+        }
 
-        protected List<Blog> Blogs
+        public List<Blog> Blogs
         {
             get { return _blogs; }
             set { _blogs = value; }
@@ -14,7 +19,7 @@ namespace DyrinternatLibarary.Repository
 
         public List<Blog> GetAll()
         {
-            return Blogs;
+            return _blogs;
         }
         public void Add(Blog blog)
         {
@@ -25,7 +30,15 @@ namespace DyrinternatLibarary.Repository
         {
             Blogs.RemoveAt(title);
         }
-
+        void seed()
+        {
+            _blogs.Add(new Blog());
+        }
+        public void Edit(int place, Blog editblog)
+        {
+            editblog.ImagePath = _blogs[place].ImagePath;
+            _blogs[place] = editblog;
+        }
 
     }
 }
