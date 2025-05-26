@@ -1,6 +1,6 @@
-﻿using DyrinternatLibarary.Model;
+﻿using Dyreinternatet.Model;
 
-namespace DyrinternatLibarary.Repository
+namespace Dyreinternatet.Repository
 {
     public interface IBlogRepo
     {
@@ -8,5 +8,7 @@ namespace DyrinternatLibarary.Repository
         List<Blog> GetAll();
         void Add(Blog blog);
         void Remove(int title);
+        void Edit(int place, Blog editblog);
+
     }
 }

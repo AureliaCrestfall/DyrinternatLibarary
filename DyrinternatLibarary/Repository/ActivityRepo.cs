@@ -1,32 +1,41 @@
-﻿using DyrinternatLibarary.Model;
-namespace DyrinternatLibarary.Repository
+﻿using Dyreinternatet.Model;
+namespace Dyreinternatet.Repository
 {
-    public class ActivityRepo:IActivityRepo
+    public class ActivityRepo : IActivityRepo
     {
         
         List<Activity> _activities;
 
-        protected List<Activity> Activities
+        public ActivityRepo()
         {
-            get { return _activities; }
-            set { _activities = value; }
+            _activities = new List<Activity>();
+            _activities.Add(new Activity());
         }
+
 
         public List<Activity> GetAll()
         {
-            return Activities;
+            return _activities;
         }
 
         public void Add(Activity activity)
         {
-            Activities.Add(activity);
+            _activities.Add(activity);
         }
 
         public void Remove(int title)
         {
-            Activities.RemoveAt(title); 
+            _activities.RemoveAt(title); 
         }
-
-       
+        public void AddJoiners(int title, string joiners)
+        {
+            _activities[title].joiners.Add(joiners);
+        }
+        public void Edit(int title, Model.Activity editactivity)
+        {
+            editactivity = _activities[title];
+            _activities[title] = editactivity;
+            
+        }
     }
 }

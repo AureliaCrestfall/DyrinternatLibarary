@@ -1,12 +1,16 @@
-﻿using DyrinternatLibarary.Model;
-using DyrinternatLibarary.Repository;
+﻿using Dyreinternatet.Model;
+using Dyreinternatet.Repository;
 
-namespace DyrinternatLibarary.Service
+namespace Dyreinternatet.Service
 {
     public class ActivityService
     {
 
         IActivityRepo _activityRepo;
+        public ActivityService(IActivityRepo activityRepo)
+        {
+            _activityRepo = activityRepo;
+        }
 
         public void Add(Activity activity)
         {
@@ -20,6 +24,14 @@ namespace DyrinternatLibarary.Service
         {
             return _activityRepo.GetAll();
         }
+        public void AddJoiners(int title,string joiners)
+        {
+            _activityRepo.AddJoiners(title, joiners);
+        }
 
+        public void Edit(int title, Model.Activity editactivity)
+        {
+            _activityRepo.Edit(title, editactivity);
+        }
     }
 }
