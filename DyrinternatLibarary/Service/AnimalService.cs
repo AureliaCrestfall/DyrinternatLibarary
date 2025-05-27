@@ -21,9 +21,17 @@ namespace Dyreinternatet.Service
         /// <returns>random imagepath to the integer of paths</returns>
         public string rndimage(string folder)
         {
-            string[] paths = Directory.GetFiles(folder);
-            int rndint = rnd.Next(paths.Length);
-           return paths[rndint];
+            try
+            {
+                string[] paths = Directory.GetFiles(folder);
+                int rndint = rnd.Next(paths.Length);
+                return paths[rndint];
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return "Image\\magician.jpg";
+            }
         }
         /// <summary>
         /// constructor for implementing interface
